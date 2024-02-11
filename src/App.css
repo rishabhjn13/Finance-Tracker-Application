@@ -1,0 +1,16 @@
+.mr {
+  border: 2px solid red;
+}
+
+.mg {
+  border: 2px solid green;
+}
+
+.mb {
+  border: 2px solid blue;
+}
+
+
+* {
+  font-family: 'Rubik', sans-serif;
+}
