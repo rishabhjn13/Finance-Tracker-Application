@@ -1,4 +1,10 @@
 @media only screen and (max-width: 768px) {
+  #main-navbar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background: white;
+  }
   #main-navbar > .nav-title-container {
     padding: 0 0 0 1rem;
     width: 80%;
@@ -12,13 +18,16 @@
     flex-direction: column;
   }
   #main-navbar > #nav-item-container > #nav-items {
+    display: none;
     order: 1;
     left: 0;
     width: 100%;
     text-align: end;
     height: 90vh;
-    position: absolute;
+    position: fixed;
     transform: translate(0, 10vh);
+    background: white;
+    z-index: 100;
   }
   #main-navbar > #nav-item-container > #nav-items > ul {
     width: 100%;
@@ -60,11 +69,12 @@
   }
   #main-navbar > #nav-item-container > #nav-items {
     height: 100%;
+    display: flex !important;
   }
   #main-navbar > #nav-item-container > #nav-items > ul {
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     height: inherit;
     padding: 0 1rem 0 0;
   }

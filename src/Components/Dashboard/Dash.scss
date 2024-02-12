@@ -1,0 +1,61 @@
+@media only screen and (max-width:768px) {
+    #main-dashboard {
+        &>#dash-activity {
+            margin: 1rem 0.5rem;
+            display: grid;
+            height: 87% !important;
+            grid-template-rows: 3fr 1fr;
+            &>section.dash-actions {
+                // order: 3;
+                position: fixed;
+                left: 0;
+                width: 100%;
+                height: 5rem;
+                border-top: 2px solid grey;
+                background: white;
+                bottom: 0;
+            }
+
+            &>section.dash-canvas {
+                order: 1;
+            }
+
+            &>section.dash-display {
+                order: 2;
+                // display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+    #main-dashboard {
+        &>#dash-activity {
+            margin: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 3fr 2fr;
+        }
+    }
+}
+
+#main-dashboard {
+    height: 90vh;
+
+    &>#dash-activity {
+        height: 95%;
+
+        &>#dash-activity {
+            &>section.dash-actions {
+                grid-area: "dashActions";
+            }
+
+            &>section.dash-canvas {
+                grid-area: "dashCanvas";
+            }
+
+            &>section.dash-display {
+                grid-area: "dashDisplay";
+            }
+        }
+    }
+}
