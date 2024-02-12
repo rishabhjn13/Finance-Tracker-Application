@@ -26,7 +26,7 @@
     height: 90vh;
     position: fixed;
     transform: translate(0, 10vh);
-    background: white;
+    background: #070D12;
     z-index: 100;
   }
   #main-navbar > #nav-item-container > #nav-items > ul {
@@ -49,11 +49,14 @@
     margin: 2px;
     border-radius: 999px;
     width: 2rem;
-    background: #000;
+    background: #F0F4EF;
     position: relative;
   }
 }
 @media only screen and (min-width: 768px) {
+  #main-navbar {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  }
   #main-navbar > .nav-title-container {
     padding: 0 0 0 2rem;
     width: 25%;
@@ -93,6 +96,8 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  background: #070D12;
+  color: #F0F4EF;
 }
 #main-navbar > .nav-title-container > #nav-title {
   cursor: pointer;

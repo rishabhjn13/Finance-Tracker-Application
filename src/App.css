@@ -9,9 +9,14 @@
 .mb {
   border: 2px solid blue;
 }
-
-
+.my{
+  border: 2px solid grey;
+}
 * {
   font-family: 'Rubik', sans-serif;
   /* overflow: hidden; */
 }
+body{
+  background: #070D12;
+}
+

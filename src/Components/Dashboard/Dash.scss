@@ -1,28 +1,34 @@
+@import '../../colors';
 @media only screen and (max-width:768px) {
-    #main-dashboard {
-        &>#dash-activity {
-            margin: 1rem 0.5rem;
-            display: grid;
-            height: 87% !important;
-            grid-template-rows: 3fr 1fr;
-            &>section.dash-actions {
-                // order: 3;
-                position: fixed;
-                left: 0;
-                width: 100%;
-                height: 5rem;
-                border-top: 2px solid grey;
-                background: white;
-                bottom: 0;
-            }
+    #dashboard-parent {
+        height: 100vh;
+        #main-dashboard {
+            &>#dash-activity {
+                // margin: 1rem 0.5rem;
+                display: grid;
+                height: 95%;
+                width: 95%;
+                grid-template-rows: 3fr 1fr;
+                &>section.dash-actions {
+                    // order: 3;
+                    position: fixed;
+                    left: 0;
+                    width: 100%;
+                    height: 5rem;
+                    border-top: 1px solid rgba(128, 128, 128, 0.2);
+                    background: $darkBlack;
+                    bottom: 0;
+                }
 
-            &>section.dash-canvas {
-                order: 1;
-            }
+                &>section.dash-canvas {
+                    order: 1;
+                    margin-bottom: 1rem;
+                }
 
-            &>section.dash-display {
-                order: 2;
-                // display: none;
+                &>section.dash-display {
+                    order: 2;
+                    // display: none;
+                }
             }
         }
     }
@@ -31,31 +37,40 @@
 @media only screen and (min-width:768px) {
     #main-dashboard {
         &>#dash-activity {
-            margin: 1rem;
+            height: 95%;
+            width: 98%;
+            // margin: 1rem;
             display: grid;
             grid-template-columns: 1fr 3fr 2fr;
+            &>section:not(:last-child){ 
+                margin-right: 1rem;
+            }
         }
     }
 }
 
 #main-dashboard {
     height: 90vh;
-
+    background: $richBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
     &>#dash-activity {
-        height: 95%;
+        &>section{ 
+            border: 1px solid rgba(128, 128, 128, 0.2);
+            background-color: $darkBlack;
+        }
+        &>section.dash-actions {
+            grid-area: "dashActions";
+        }
 
-        &>#dash-activity {
-            &>section.dash-actions {
-                grid-area: "dashActions";
-            }
+        &>section.dash-canvas {
+            grid-area: "dashCanvas";
+        }
 
-            &>section.dash-canvas {
-                grid-area: "dashCanvas";
-            }
-
-            &>section.dash-display {
-                grid-area: "dashDisplay";
-            }
+        &>section.dash-display {
+            grid-area: "dashDisplay";
         }
     }
 }

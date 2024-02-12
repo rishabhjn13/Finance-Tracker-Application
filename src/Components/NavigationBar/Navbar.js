@@ -38,7 +38,7 @@ export default class Navbar extends Component {
     }
     render() {
         return (
-            <div id='main-navbar' className='flex border-b-2'>
+            <div id='main-navbar' className='flex'>
                 <div className="nav-title-container h-full flex items-center">
                     <h3 id="nav-title" className='align-items-center'>{this.props.navTitle}</h3>
                 </div>

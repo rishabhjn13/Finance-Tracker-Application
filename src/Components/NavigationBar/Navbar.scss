@@ -1,3 +1,4 @@
+@import '../../colors';
 @media only screen and (max-width:768px) {
     #main-navbar {
         // To change the hamburger menu icon to cross when menu gets toggled
@@ -31,7 +32,7 @@
                 height: 90vh;
                 position: fixed;
                 transform: translate(0, 10vh);
-                background: white;
+                background: $darkBlack;
                 z-index: 100;
                 &>ul {
                     width: 100%;
@@ -58,7 +59,7 @@
                     margin: 2px;
                     border-radius: 999px;
                     width: 2rem;
-                    background: #000;
+                    background: $babyPowder;
                     position: relative;
                 }
             }
@@ -68,7 +69,7 @@
 
 @media only screen and (min-width:768px) {
     #main-navbar {
-
+        border-bottom:1px solid rgba(128, 128, 128, 0.2);
         // height: 10vh; Commented because height of navbar is same on both resolutions
         &>.nav-title-container {
             padding: 0 0 0 2rem;
@@ -116,7 +117,8 @@
 #main-navbar {
     height: 10vh;
     user-select: none;
-
+    background: $darkBlack;
+    color: $babyPowder;
     &>.nav-title-container {
         &>#nav-title {
             cursor: pointer;
